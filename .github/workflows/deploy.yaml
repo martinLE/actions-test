@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-22.04
     steps:
       - run: echo "this is where the build job will be..."
