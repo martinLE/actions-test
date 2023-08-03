@@ -1,0 +1,10 @@
+name: Run Tests
+run-name: Run Tests
+on: [push]
+jobs:
+  tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: |
+          sleep 5
+          echo "Finshed tests"

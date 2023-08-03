@@ -1,0 +1,14 @@
+name: Deploy Image
+run-name: Deploy Image
+on:
+  workflow_run:
+    workflows: [Run Tests]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo "this is where the build job will be..."
+
